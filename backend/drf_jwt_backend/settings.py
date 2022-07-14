@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
     'cars.apps.CarsConfig',  # This app is for example use only
-    'readers.apps.ReadersConfig'
+    'readers.apps.ReadersConfig',
 ]
 
 MIDDLEWARE = [

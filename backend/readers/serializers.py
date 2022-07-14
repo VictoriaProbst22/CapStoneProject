@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Readers
+from .models import Reader
 
 class ReadersSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Readers
+        model = Reader
         fields = ['id', 'user', 'text']
         depth = 1
