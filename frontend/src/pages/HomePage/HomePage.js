@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
 import SearchBar from "../SearchPage/SearchBar";
+import SearchPage from "../SearchPage/SearchPage";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -33,23 +34,17 @@ const HomePage = () => {
 
   
   async function runSearch(){
-    let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse');
+    let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=harry+potter');
      setSearchResults(response.data.items);
      console.log(response.data);
    }
-
-
 
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
       <SearchBar searchBookProp={runSearch} />
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
+      <SearchPage searchResults={searchResults} />
+      
     </div>
   );
 };

@@ -14,7 +14,7 @@ const SearchPage = (props) => {
             {props.searchResults.map((item)=>{
                 return(
                     <ul>
-                    <li> {item.items.volumeInfo.title}</li>
+                    <li> {item.volumeInfo.title}</li>
                     </ul>
   
                 );
