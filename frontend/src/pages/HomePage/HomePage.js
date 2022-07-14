@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
+import SearchBar from "../SearchPage/SearchBar";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -10,6 +11,7 @@ const HomePage = () => {
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
   const [cars, setCars] = useState([]);
+  const[searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -26,9 +28,22 @@ const HomePage = () => {
     };
     fetchCars();
   }, [token]);
+
+
+
+  
+  async function runSearch(){
+    let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse');
+     setSearchResults(response.data.items);
+     console.log(response.data);
+   }
+
+
+
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
+      <SearchBar searchBookProp={runSearch} />
       {cars &&
         cars.map((car) => (
           <p key={car.id}>
