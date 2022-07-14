@@ -1,9 +1,8 @@
-from importlib.resources import path
+
 from django.urls import path
-from . import views
+from readers import views
 
 urlpatterns = [
-    path('<int:pk>/', views.reader_detail),
-     path('', views.user_books),
+    path('', views.user_readers),
     path('all/', views.get_all_readers),
 ]

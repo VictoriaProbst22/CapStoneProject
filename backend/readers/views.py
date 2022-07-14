@@ -18,7 +18,7 @@ def get_all_readers(request):
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def user_books(request):
+def user_readers(request):
     print(
         'User ', f"{request.user.id} {request.user.email} {request.user.username}")
     if request.method == 'POST':
@@ -37,15 +37,15 @@ def user_books(request):
 def reader_detail(request, pk):
     print(
         'User ', f"{request.user.id}")
-    reader = get_object_or_404(Reader, pk=pk)
+    readers = get_object_or_404(Reader, pk=pk)
     if request.method == 'GET':
-        serializer = ReadersSerializer(reader);
+        serializer = ReadersSerializer(readers);
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'PUT':
-        serializer = ReadersSerializer(reader, data=request.data)
+        serializer = ReadersSerializer(readers, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'DELETE':
-        reader.delete()
+        readers.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
