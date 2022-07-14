@@ -15,6 +15,8 @@ const SearchPage = (props) => {
                 return(
                     <ul>
                     <li> {item.volumeInfo.title}</li>
+                    <li>{item.volumeInfo.authors}</li>
+                    <li> {item.volumeInfo.description} </li>
                     </ul>
   
                 );
