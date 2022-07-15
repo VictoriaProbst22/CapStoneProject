@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 
 const SearchPage = (props) => {
@@ -13,11 +15,11 @@ const SearchPage = (props) => {
         </div><div>
             {props.searchResults.map((item)=>{
                 return(
-                    <ul>
-                    <li> {item.volumeInfo.title}</li>
-                    <li>{item.volumeInfo.authors}</li>
-                    <li> {item.volumeInfo.description} </li>
-                    </ul>
+                    <div>
+                    <Link to={`book/${item.id}/`}>{item.volumeInfo.title}</Link> 
+                    <ul>{item.volumeInfo.authors}</ul>
+                    <ul> {item.volumeInfo.description} </ul>
+                    </div>
   
                 );
                 
