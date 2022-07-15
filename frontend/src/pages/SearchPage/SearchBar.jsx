@@ -4,12 +4,12 @@ const SearchBar = (props) => {
     
    const [sTerm, setSTerm] = useState('')
     
-   
-   
+
 
 
     function handleSubmit(event){
         event.preventDefault();
+        
     
          console.log(sTerm);
         props.searchBookProp(sTerm);
@@ -24,7 +24,7 @@ const SearchBar = (props) => {
     return ( 
        <form onSubmit={handleSubmit} >
         <div>
-            <input type="text" name="search_term" value={sTerm} onChange={onChange} ></input>
+            <input id="title" type="text" name="search_term" value={sTerm} onChange={onChange} ></input>
             <button type="submit"> Search </button>
         </div>
        </form>

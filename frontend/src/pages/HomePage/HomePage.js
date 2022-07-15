@@ -14,6 +14,9 @@ const HomePage = () => {
   const [cars, setCars] = useState([]);
   const[searchResults, setSearchResults] = useState([]);
 
+  
+
+
   useEffect(() => {
     const fetchCars = async () => {
       try {
@@ -31,13 +34,29 @@ const HomePage = () => {
   }, [token]);
 
 
+  const runSearch = async (userInput) => {
+    try {
+      let response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${userInput}+intitle`);
+      console.log(response.data)
+  
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  }
+
 
   
-  async function runSearch(){
-    let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=harry+potter');
-     setSearchResults(response.data.items);
-     console.log(response.data);
-   }
+  // async function runSearch(){
+  //   let userInput = ''
+  //   let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q={userInput}+intitle');
+  //    setSearchResults(response.data.items);
+  //    console.log(response.data);
+  //  }
+
+   
+   
+
+
 
   return (
     <div className="container">
