@@ -38,7 +38,7 @@ const HomePage = () => {
     try {
       let response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${userInput}+intitle`);
       console.log(response.data)
-  
+      setSearchResults(response.data.items);
     } catch (error) {
       console.log(error.response.data);
     }
@@ -49,7 +49,7 @@ const HomePage = () => {
   // async function runSearch(){
   //   let userInput = ''
   //   let response = await axios.get('https://www.googleapis.com/books/v1/volumes?q={userInput}+intitle');
-  //    setSearchResults(response.data.items);
+  //    
   //    console.log(response.data);
   //  }
 
