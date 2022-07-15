@@ -36,7 +36,7 @@ const HomePage = () => {
 
   const runSearch = async (userInput) => {
     try {
-      let response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${userInput}+intitle`);
+      let response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${userInput}`);
       console.log(response.data)
       setSearchResults(response.data.items);
     } catch (error) {
