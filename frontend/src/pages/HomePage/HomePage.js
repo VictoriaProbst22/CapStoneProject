@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-
+import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../SearchPage/SearchBar";
 import SearchPage from "../SearchPage/SearchPage";
@@ -49,9 +49,11 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
+     
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
-      <ReadList />
+      <ReadList bookToAdd={searchResults}/>
+      
       
     </div>
   );

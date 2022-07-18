@@ -13,18 +13,23 @@ let initialValues ={
 
 
 const ReadList = () => {
+    
     const [user, token] = useAuth()
-    const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues,postNewBook)
+    
+    const [formData, handleInputChange, handleSubmit] = useCustomForm(initialValues,  postNewBook)
    
 
-    async function postNewBook(){
+
+    async function postNewBook(props){
+       console.log(props.searchResults)
+       
         try {
             let response = await axios.post("http://127.0.0.1:8000/readers/", formData, {
                 headers: {
                     Authorization: 'Bearer ' + token
                 }
-            })
-            console.log(response)
+            }) 
+            console.log(response.data)
         } catch (error) {
             console.log(error.message)
         }
