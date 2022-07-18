@@ -56,3 +56,9 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
 }
+
+.viewerCanvas{
+  margin-left: 150px;
+  width: 700px;
+  height: 800px;
+}

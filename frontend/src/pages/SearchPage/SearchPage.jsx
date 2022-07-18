@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 
 
@@ -13,12 +13,13 @@ const SearchPage = (props) => {
                 <p>Results</p>
             </h1>
         </div><div>
-            {props.searchResults.map((item)=>{
+            {props.searchResults.map((item, index)=>{
                 return(
                     <div>
-                    <Link to={`book/${item.id}/`}>{item.volumeInfo.title}</Link> 
+                    <ul>{index + 1}</ul>
+                    <ul>Title: {item.volumeInfo.title}</ul>
                     <ul> Author(s):{item.volumeInfo.authors}</ul>
-                    <ul> Description: {item.volumeInfo.description} </ul>
+                    <button type="submit"> Add to Read List</button>
                     </div>
   
                 );
