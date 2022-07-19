@@ -33,6 +33,25 @@ const SearchPage = (props) => {
         }
 
     }
+    const addToList= async (bookToAdd)=>{
+        let otherBook = {
+            "text": "Yes",
+            "title": bookToAdd.volumeInfo.title,
+            "authors": bookToAdd.volumeInfo.authors.join(', '),
+        }
+        console.log(otherBook)
+         try {
+            let response = await axios.post("http://127.0.0.1:8000/wishList/", otherBook, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            }) 
+            console.log(response.data)
+        } catch (error) {
+            console.log(error.message)
+        }
+
+    }
     return (
         <><div>
         </div><div>
@@ -50,7 +69,7 @@ const SearchPage = (props) => {
                         <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
                     <button onClick={()=> addBook(item)}> Add to Read List</button>
-                    <button onClick={()=> addBook(item)}>Add to Wish List</button>
+                    <button onClick={()=> addToList(item)}>Add to Wish List</button>
                     
                     </div>
 

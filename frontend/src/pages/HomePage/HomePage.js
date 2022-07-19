@@ -55,7 +55,7 @@ const HomePage = () => {
       <Link to="/WishList">Add Book To WishList</Link>
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
-      <WishList/>
+      
       
     </div>
   );
