@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../SearchPage/SearchBar";
 import SearchPage from "../SearchPage/SearchPage";
-import ReadList from "../ReadList/ReadList";
+
 
 
 const HomePage = () => {
@@ -49,10 +49,9 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-     
+      <Link to="/addBook"> Add Book To Read List</Link>
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
-      <ReadList bookToAdd={searchResults}/>
       
       
     </div>

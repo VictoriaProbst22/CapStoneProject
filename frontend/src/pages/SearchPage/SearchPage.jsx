@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+
+
 const SearchPage = (props) => {
     console.log(props.searchResults);
     const[isShown, setIsShown] = useState(false);
@@ -11,11 +13,13 @@ const SearchPage = (props) => {
         setIsShown(current => !current);
     };
 
-    const add_book= async (bookToAdd)=>{
+    const addBook= async (bookToAdd)=>{
         let newBook = {
-            "title": bookToAdd.title,
-            "author": bookToAdd.author,
+            "text": "Yes",
+            "title": bookToAdd.volumeInfo.title,
+            "authors": bookToAdd.volumeInfo.authors.join(', '),
         }
+        console.log(newBook)
          try {
             let response = await axios.post("http://127.0.0.1:8000/readers/", newBook, {
                 headers: {
@@ -30,9 +34,6 @@ const SearchPage = (props) => {
     }
     return (
         <><div>
-            <h1>
-                <p>Results</p>
-            </h1>
         </div><div>
             {props.searchResults.map((item, index)=>{
                 return(
@@ -47,7 +48,7 @@ const SearchPage = (props) => {
                        {isShown &&(
                         <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
-                    <button onClick={()=> add_book(item)}> Add to Read List</button>
+                    <button onClick={()=> addBook(item)}> Add to Read List</button>
                     </div>
   
                 );
@@ -62,23 +63,3 @@ const SearchPage = (props) => {
 }
 export default SearchPage;
 
-//const add_book= async (bookToAdd)=>{
-//    let newBook = {
-//        "user": bookToAdd.user,
-//        "text": bookToAdd.text,
-//        "title": bookToAdd.title,
-//        "author": bookToAdd.author,
-//    }
-//    //axios
-//    try {
-//        let response = await axios.post("http://127.0.0.1:8000/readers/", newBook, {
-//            headers: {
-//                Authorization: 'Bearer ' + token
-//            }
-//        }) 
-//        console.log(response.data)
-//    } catch (error) {
-//        console.log(error.message)
-//    }
-//}
-//onClick={()=>add_book(item)}
