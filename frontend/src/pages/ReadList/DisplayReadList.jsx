@@ -1,7 +1,7 @@
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import { useState, useEffect } from "react";
-
+import CustomButton from "../CustomButton/CustomButton";
 const DisplayReadList = () => {
 
     const [user, token] = useAuth()
@@ -37,6 +37,8 @@ const DisplayReadList = () => {
                     <ul>Title: {el.title}</ul>
                     <ul>Author(s): {el.authors}</ul>
                     <ul>Review: {el.text}</ul>
+                    <CustomButton message = "Like" />
+                    <CustomButton message = "Dislike"/>
                 </div>
             )
         })}

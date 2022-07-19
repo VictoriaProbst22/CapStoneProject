@@ -50,6 +50,7 @@ const SearchPage = (props) => {
                         <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
                     <button onClick={()=> addBook(item)}> Add to Read List</button>
+                    <button onClick={()=> addBook(item)}>Add to Wish List</button>
                     
                     </div>
 
