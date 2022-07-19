@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios'
 import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
+import DisplayWishList from "./DisplayWishList";
 
 
 
@@ -65,6 +66,7 @@ const WishList = () => {
         </label>
         <button> Add Book to Wish List!</button>
         </form>
+        <DisplayWishList/>
         </div>
     </div> 
     </div> );
