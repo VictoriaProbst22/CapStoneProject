@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../SearchPage/SearchBar";
 import SearchPage from "../SearchPage/SearchPage";
+import WishList from "../WishList/WishList"
 
 
 

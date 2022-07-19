@@ -5,6 +5,8 @@ import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
 import DisplayReadList from "./DisplayReadList";
 
+
+
 let initialValues ={
     user: "",
     text: "",
@@ -67,6 +69,8 @@ const ReadList = () => {
         </form>
         </div>
         <DisplayReadList />
+        
+        
     </div> 
     
     );
