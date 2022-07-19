@@ -37,8 +37,6 @@ const WishList = () => {
 
     return ( 
     <div>
-        <h3>This Is My WishList!</h3>
-        <div>
         
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
@@ -68,7 +66,7 @@ const WishList = () => {
         </form>
         <DisplayWishList/>
         </div>
-    </div> 
+     
     </div> );
 }
  

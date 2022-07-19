@@ -28,14 +28,14 @@ const DisplayWishList = () => {
 
 
     return ( <div>
-        <h3> Read List:</h3>
+        <h3> This is My Wish List:</h3>
         {otherBookList.map((el, index) => {
             return(
                 <div>
                     <ul>{index + 1}</ul>
                     <ul>Title: {el.title}</ul>
                     <ul>Author(s): {el.authors}</ul>
-                    <ul>Review: {el.text}</ul>
+                    <button type="submit">Delete</button>
                 </div>
             )
         })}

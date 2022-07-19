@@ -50,9 +50,9 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      <Link to="/addBook"> Add Book To Read List</Link>
+      <Link to="/addBook"> To Read List</Link>
       <div></div>
-      <Link to="/WishList">Add Book To WishList</Link>
+      <Link to="/WishList"> To WishList</Link>
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
       
