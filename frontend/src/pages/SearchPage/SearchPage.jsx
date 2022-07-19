@@ -4,6 +4,7 @@ import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 
 
+
 const SearchPage = (props) => {
     console.log(props.searchResults);
     const[isShown, setIsShown] = useState(false);
@@ -49,8 +50,9 @@ const SearchPage = (props) => {
                         <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
                     <button onClick={()=> addBook(item)}> Add to Read List</button>
+                    
                     </div>
-  
+
                 );
                 
          

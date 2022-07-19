@@ -3,6 +3,7 @@ import React from "react";
 import axios from 'axios'
 import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
+import DisplayReadList from "./DisplayReadList";
 
 let initialValues ={
     user: "",
@@ -37,7 +38,7 @@ const ReadList = () => {
 
 
     return ( <div>
-        <h2>Read List: </h2>
+        
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>
@@ -65,6 +66,7 @@ const ReadList = () => {
         <button> Add Book to List!</button>
         </form>
         </div>
+        <DisplayReadList />
     </div> 
     
     );
