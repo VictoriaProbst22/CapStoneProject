@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchBar from "../SearchPage/SearchBar";
 import SearchPage from "../SearchPage/SearchPage";
-import WishList from "../WishList/WishList"
+import WishList from "../WishList/WishList";
 
 
 
@@ -51,9 +51,11 @@ const HomePage = () => {
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
       <Link to="/addBook"> Add Book To Read List</Link>
+      <div></div>
+      <Link to="/WishList">Add Book To WishList</Link>
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
-      
+      <WishList/>
       
     </div>
   );
