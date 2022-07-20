@@ -53,6 +53,8 @@ const HomePage = () => {
       <Link to="/addBook"> To Read List</Link>
       <div></div>
       <Link to="/WishList"> To WishList</Link>
+      <div></div>
+      <Link to="/RecommendedList">To Recommended List</Link>
       <SearchBar searchBookProp={runSearch} />
       <SearchPage searchResults={searchResults} />
       
