@@ -4,5 +4,5 @@ from .models import wishList
 class wishListSeralizer(serializers.ModelSerializer):
     class Meta:
         model = wishList
-        fields = ['user', 'title', 'authors']
+        fields = ['id', 'user', 'title', 'authors']
         depth = 1
