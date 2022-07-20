@@ -31,7 +31,7 @@ export const data = [
 
 
 
-const genreCharts = () => {
+const genreCharts = ({bookListProps}) => {
 
 
 

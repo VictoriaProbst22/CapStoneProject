@@ -2,6 +2,9 @@ import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 import { useState, useEffect } from "react";
 import CustomButton from "../CustomButton/CustomButton";
+import GenresChart from "../GenresChart/GenresChart"
+
+
 const DisplayReadList = () => {
 
     const [user, token] = useAuth()
@@ -40,8 +43,10 @@ const DisplayReadList = () => {
                     <CustomButton message = "Like" />
                     <CustomButton message = "Dislike"/>
                 </div>
+               
             )
-        })}
+        })} 
+        <GenresChart bookListProps={bookList}/>
     </div> );
 }
  
