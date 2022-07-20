@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cars.apps.CarsConfig',  # This app is for example use only
     'readers.apps.ReaderConfig',
     'wishList.apps.WishlistConfig',
+    'recommendedList.apps.RecommendedlistConfig',
 ]
 
 MIDDLEWARE = [
