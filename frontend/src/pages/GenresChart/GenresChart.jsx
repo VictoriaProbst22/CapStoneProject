@@ -30,33 +30,41 @@ const genreCharts = ({bookListProps}) => {
 
 
       let genreArrays = distinctGenres.map(genre=>{
-        let allGenresOfBooks = bookListProps.filter(book=>book.genres=== genre);
-        console.log("All Genres of Books: ", allGenresOfBooks)
+       
+        
+        let genresOfBooks = 0;
+        
 
-        return [genre, allGenresOfBooks]
+        for (let i = 0; i < bookListProps.length; i++) {
+          if (bookListProps[i].genres == genre) {
+            genresOfBooks ++ 
+          }
+          
+        }
+        
+        return [genre, genresOfBooks]
       });
       console.log("Genre Arrays: ", genreArrays)
-    
-
-
+  
       
       function displayGenres(){
         const data = [
-          ["Genres", "# of Books"],
-           ...genreArrays
-         ];
+          ["Genres", "Frequency"],
+          ...genreArrays
+         ]
+  
          console.log("Data: ", data);
         return data;
 
       }
       
     return ( <div>
-        <Chart
+         <Chart
       chartType="PieChart"
       data={displayGenres()}
       options={options}
       width={"100%"}
-      height={"600px"}
+      height={"400px"}
     />
        
     </div> );
