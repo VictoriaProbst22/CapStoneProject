@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import axios from 'axios'
 import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
@@ -41,7 +41,11 @@ const ReadList = () => {
 
 
     return ( <div>
-        
+        <h1>Read List Page</h1>
+        <Link to="/WishList"> To WishList</Link>
+        <div></div>
+        <Link to="/RecommendedList">To Recommended List</Link>
+        <div></div>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>

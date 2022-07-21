@@ -3,7 +3,7 @@ import axios from 'axios'
 import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
 import DisplayRecommendedList from "./DisplayRecommendedList";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -37,7 +37,11 @@ const RecommendedList = () => {
 
     return ( 
     <div>
-        
+        <h3>Recommended Books Page</h3>
+        <Link to="/addBook"> To Read List</Link>
+        <div></div>
+        <Link to="/WishList"> To WishList</Link>
+        <div></div>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>
