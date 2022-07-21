@@ -51,7 +51,7 @@ const DisplayReadList = () => {
         <h3> Read List:</h3>
         {bookList.map((el, index) => {
             return(
-                <div>
+                <div >
                     <ul>{index + 1}</ul>
                     <ul>Title: {el.title}</ul>
                     <ul>Author(s): {el.authors}</ul>
