@@ -62,7 +62,7 @@ const ReadList = () => {
         <label> Genre: {" "}
         <input 
         type="text"
-        name="text"
+        name="genres"
         value={formData.genres}
         onChange={handleInputChange} />
         </label>
@@ -70,7 +70,7 @@ const ReadList = () => {
             Review: {" "}
             <input
             type="text"
-            name="genres"
+            name="text"
             value={formData.text}
             onChange={handleInputChange} />
         </label>

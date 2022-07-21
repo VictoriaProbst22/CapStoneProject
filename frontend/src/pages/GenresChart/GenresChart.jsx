@@ -1,14 +1,10 @@
 import React from "react";
 import { Chart } from "react-google-charts"
 
+export const options = {
+  title: "My Frequent Genres: ",
+};
  
-  export const options = {
-    title: "Genres Most Frequently and Less Frequently Read by User",
-    width: 600,
-    height: 400,
-    bar: { groupWidth: "95%" },
-    legend: { position: "none" },
-  };
 
 
 
@@ -16,44 +12,49 @@ import { Chart } from "react-google-charts"
 
 const genreCharts = ({bookListProps}) => {
 
-  function generateDataForChart(){
+ 
     console.log("Book List Props: ", bookListProps)
 
-      //Filter Books by Genre
-      //let filteredGenres = bookListProps.filter(book => book. )
+      //MAP Books by Genre
+      let filteredGenres = bookListProps.map(book=>{
+        return book.genres
+      });
+      console.log("Filtered Genres: ", filteredGenres)
 
-    const data = [
-        [
-          "Genre",
-          "# of Books",
-          { role: "style" },
-          {
-            sourceColumn: 0,
-            role: "annotation",
-            type: "string",
-            calc: "stringify",
-          },
-        ],
-        ["Fiction", 8.94, "silver", null],
-        ["Silver", 10.49, "silver", null],
-        ["Gold", 19.3, "silver", null],
-        ["Platinum", 21.45, "silver", null],
-      ];
-      return data;
-  
+      //Remove duplicates
+      let distinctGenres = [...new Set(filteredGenres)]
+      console.log("Distinct Genres: ", distinctGenres)
+      
 
-    }
-  
+      let genreArrays = distinctGenres.map(genre=>{
+
+        let allGenresofBooks = bookListProps.filter(book=>book.genres=== genre).map(book =>book.genres);
+        console.log("All Genres of Books: ", allGenresofBooks)
+
+        return [genre, distinctGenres]
+      });
+      console.log("Genre Arrays: ", genreArrays)
+    
+      function displayGenres(){
+          const data = [
+                  ["Genres", "# of Books"],
+                  ...genreArrays
+                ];
+                console.log("Data: ", data);
+                return data
+
+      }
+      
     return ( <div>
         <h5> Insert Chart here</h5>
-
         <Chart
-      chartType="BarChart"
-      width="100%"
-      height="400px"
-      data={generateDataForChart()}
+      chartType="PieChart"
+      data={displayGenres()}
       options={options}
-        />
+      width={"100%"}
+      height={"400px"}
+    />
+       
     </div> );
 }
  
