@@ -31,6 +31,21 @@ const DisplayReadList = () => {
 
 
 
+      const deleteBook= async (el)=>{
+         try {
+            let response = await axios.delete(`http://127.0.0.1:8000/readers/${el.id}/`, {
+                headers: {
+                    Authorization: 'Bearer ' + token
+                }
+            }) 
+            
+            console.log(response.data)
+        } catch (error) {
+            console.log(error.message)
+        }
+
+
+      }
     return ( <div>
         <h3> Read List:</h3>
         {bookList.map((el, index) => {
@@ -42,6 +57,7 @@ const DisplayReadList = () => {
                     <ul>Review: {el.text}</ul>
                     <CustomButton message = "Like" />
                     <CustomButton message = "Dislike"/>
+                    <button onClick={()=> deleteBook(el)}>Delete</button>
                 </div>
                
             )

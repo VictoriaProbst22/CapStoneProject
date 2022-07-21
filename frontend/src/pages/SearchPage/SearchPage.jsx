@@ -19,6 +19,7 @@ const SearchPage = (props) => {
             "text": "Yes",
             "title": bookToAdd.volumeInfo.title,
             "authors": bookToAdd.volumeInfo.authors.join(', '),
+            "genres": bookToAdd.volumeInfo.categories[0],
         }
         console.log(newBook)
          try {
@@ -38,6 +39,7 @@ const SearchPage = (props) => {
             "text": "Yes",
             "title": bookToAdd.volumeInfo.title,
             "authors": bookToAdd.volumeInfo.authors.join(', '),
+            
         }
         console.log(otherBook)
          try {
@@ -61,6 +63,7 @@ const SearchPage = (props) => {
                 "text": "Yes",
                 "title": bookToAdd.volumeInfo.title,
                 "authors": bookToAdd.volumeInfo.authors.join(', '),
+                
             }
             console.log(nextBook)
              try {

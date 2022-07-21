@@ -12,6 +12,7 @@ let initialValues ={
     text: "",
     title:"",
     authors: "",
+    genres: "",
 };
 
 
@@ -58,18 +59,26 @@ const ReadList = () => {
         value={formData.authors}
         onChange={handleInputChange} />
         </label>
-        <label> Review: {" "}
+        <label> Genre: {" "}
         <input 
         type="text"
         name="text"
-        value={formData.text}
+        value={formData.genres}
         onChange={handleInputChange} />
+        </label>
+        <label>
+            Review: {" "}
+            <input
+            type="text"
+            name="genres"
+            value={formData.text}
+            onChange={handleInputChange} />
         </label>
         <button> Add Book to Read List!</button>
         </form>
         </div>
-        <DisplayReadList />
         
+        <DisplayReadList />
         
     </div> 
     
@@ -77,3 +86,4 @@ const ReadList = () => {
 }
  
 export default ReadList;
+

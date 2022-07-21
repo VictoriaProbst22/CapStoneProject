@@ -7,3 +7,4 @@ class Reader(models.Model):
     text = models.CharField(max_length=225)
     title = models.CharField(max_length=225)
     authors = models.CharField(max_length=225)
+    genres = models.CharField(max_length=225)
