@@ -40,7 +40,7 @@ const ReadList = () => {
 
 
 
-    return ( <div>
+    return ( <div className="frontPage">
         <h1>Read List Page</h1>
         <Link to="/WishList"> To WishList</Link>
         <div></div>

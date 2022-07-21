@@ -55,10 +55,25 @@ button:hover {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  text-align: center;
 }
 
 .viewerCanvas{
   margin-left: 150px;
   width: 700px;
   height: 800px;
+}
+
+.frontPage{
+  background-color: rgb(255, 255, 255);
+  color: rgb(37, 89, 148);
+  
+}
+
+.buttons1{
+  background-color: darkgoldenrod;
+}
+
+.resultsDisplay{
+  text-align: center;
 }
