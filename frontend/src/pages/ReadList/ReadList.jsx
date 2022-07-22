@@ -46,7 +46,7 @@ const ReadList = () => {
         <div></div>
         <Link to="/RecommendedList">To Recommended List</Link>
         <div></div>
-        <h2 className="frontPage"> Add Another Book Here: </h2>
+        <h2 className="frontPages"> Add Another Book Here: </h2>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>
