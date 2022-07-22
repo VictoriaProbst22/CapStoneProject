@@ -3,6 +3,7 @@ import { Chart } from "react-google-charts"
 
 export const options = {
   title: "My Frequent Genres: ",
+  backgroundColor: 'transparent'
 };
  
 
@@ -36,7 +37,7 @@ const genreCharts = ({bookListProps}) => {
         
 
         for (let i = 0; i < bookListProps.length; i++) {
-          if (bookListProps[i].genres == genre) {
+          if (bookListProps[i].genres === genre) {
             genresOfBooks ++ 
           }
           
@@ -58,13 +59,14 @@ const genreCharts = ({bookListProps}) => {
 
       }
       
-    return ( <div>
-         <Chart
+    return ( <div >
+         <Chart 
       chartType="PieChart"
       data={displayGenres()}
       options={options}
-      width={"100%"}
-      height={"400px"}
+      width={"50%"}
+      height={"500px"}
+    
     />
        
     </div> );

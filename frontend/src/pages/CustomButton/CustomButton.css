@@ -1,14 +1,14 @@
 .active{
-    background-color: rgb(62, 137, 250);
+    background-color: rgb(201, 176, 108);
     color: white;
 }
 
 .inactive{
-    background-color: rgb(240, 237, 231);
+    background-color: transparent;
 }
 
 .button-style{
-    color: rgb(255, 255, 255);
+    color: rgb(247, 192, 14);
     text-align: center;
     margin: 4px 2px;
     display: inline;

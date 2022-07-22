@@ -66,20 +66,31 @@ button:hover {
 
 .frontPage{
   background-color: rgb(255, 255, 255);
-  color: rgb(37, 89, 148);
+  color: steelblue;
   text-align: center;
   margin-left: 50px;
+  background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
+  background-size: fill;
+  height: 100%;
+  
 }
 .fontStyle{
-  text-shadow: 0 0 5px rgb(98, 133, 207);
+  text-shadow: 3px  1px #3e54b9;
   text-decoration: underline;
+  color: steelblue;
 }
 
 .otherPages{
   text-align: justify;
+  background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
+  background-size: fill;
+  background-size: fill;
+  height: 100%;
+  
 }
 
 .otherPagesResults{
   margin-left: auto;
   text-align: left;
 }
+
