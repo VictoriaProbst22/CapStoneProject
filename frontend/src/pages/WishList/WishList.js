@@ -37,7 +37,7 @@ const WishList = () => {
 
     return ( 
     <div className="frontPage">
-        <h1>Wish List Page</h1>
+        <h1 className="fontStyle">Wish List Page</h1>
          <Link to="/RecommendedList">To Recommended List</Link>
          <div></div>
          <Link to="/addBook"> To Read List</Link>

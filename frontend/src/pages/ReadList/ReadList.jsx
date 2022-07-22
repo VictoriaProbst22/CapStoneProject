@@ -41,7 +41,7 @@ const ReadList = () => {
 
 
     return ( <div className="frontPage">
-        <h1>Read List Page</h1>
+        <h1 className="fontStyle">Read List Page</h1>
         <Link to="/WishList"> To WishList</Link>
         <div></div>
         <Link to="/RecommendedList">To Recommended List</Link>

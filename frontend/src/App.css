@@ -68,12 +68,9 @@ button:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(37, 89, 148);
   text-align: center;
+  margin-left: 80px;
 }
-
-.buttons1{
-  background-color: darkgoldenrod;
-}
-
-.resultsDisplay{
-  text-align: center;
+.fontStyle{
+  text-shadow: 0 0 5px rgb(98, 133, 207);
+  text-decoration: underline;
 }
