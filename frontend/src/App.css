@@ -94,3 +94,8 @@ button:hover {
   text-align: left;
 }
 
+.results button:hover{
+  background: gainsboro;
+  color: rgb(201, 176, 108);
+  cursor: pointer;
+}
