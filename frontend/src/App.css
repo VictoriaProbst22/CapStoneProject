@@ -74,3 +74,7 @@ button:hover {
   text-shadow: 0 0 5px rgb(98, 133, 207);
   text-decoration: underline;
 }
+
+.otherPages{
+  text-align: justify;
+}

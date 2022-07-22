@@ -36,12 +36,13 @@ const RecommendedList = () => {
 
 
     return ( 
-    <div className="frontPage">
+    <div className="otherPages">
         <h1 className="fontStyle">Recommended Books Page</h1>
         <Link to="/addBook"> To Read List</Link>
         <div></div>
         <Link to="/WishList"> To WishList</Link>
         <div></div>
+        <h2 className="frontPage"> Add Another Book Here: </h2>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>
