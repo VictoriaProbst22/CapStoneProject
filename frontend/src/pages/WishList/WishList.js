@@ -59,13 +59,7 @@ const WishList = () => {
         value={formData.authors}
         onChange={handleInputChange} />
         </label>
-        <label> Review: {" "}
-        <input 
-        type="text"
-        name="text"
-        value={formData.text}
-        onChange={handleInputChange} />
-        </label>
+       
         <button> Add Book to Wish List!</button>
         </form>
         <DisplayWishList/>

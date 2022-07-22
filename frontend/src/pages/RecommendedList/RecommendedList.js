@@ -59,13 +59,7 @@ const RecommendedList = () => {
         value={formData.authors}
         onChange={handleInputChange} />
         </label>
-        <label> Review: {" "}
-        <input 
-        type="text"
-        name="text"
-        value={formData.text}
-        onChange={handleInputChange} />
-        </label>
+        
         <button>Add Recommend List!</button>
         </form>
         <DisplayRecommendedList/>
