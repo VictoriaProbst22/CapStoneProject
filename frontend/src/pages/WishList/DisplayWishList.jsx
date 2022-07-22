@@ -43,7 +43,7 @@ const DisplayWishList = () => {
 
     }
     return ( <div className="frontPage">
-        <h3> This is My Wish List:</h3>
+        <h3 className="otherPages"> This is My Wish List:</h3>
         {otherBookList.map((el, index) => {
             return(
                 <div>
