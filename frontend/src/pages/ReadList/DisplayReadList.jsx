@@ -10,7 +10,7 @@ const DisplayReadList = () => {
     const [user, token] = useAuth()
     const [bookList, setBookList] = useState([])
 
-
+    
 
 
     useEffect(() => {
@@ -43,6 +43,10 @@ const DisplayReadList = () => {
         } catch (error) {
             console.log(error.message)
         }
+
+
+
+       
 
 
       }

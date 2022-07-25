@@ -92,7 +92,10 @@ const SearchPage = (props) => {
                     <ul> Author(s):{item.volumeInfo.authors}</ul>
                    <ul> <button onClick={handleClick}>See More</button></ul>
                     {isShown &&(
-                        <ul>Description: {item.volumeInfo.description}</ul>
+                        <ul>Description: {item.searchInfo.textSnippet}</ul>
+                       )}
+                       {isShown &&(
+                        <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
                        {isShown &&(
                         <ul>Genre: {item.volumeInfo.categories}</ul>
