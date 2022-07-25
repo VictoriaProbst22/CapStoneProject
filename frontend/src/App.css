@@ -100,3 +100,7 @@ button:hover {
   cursor: pointer;
 }
 
+.textStyle{
+  text-align: justify;
+  color: steelblue;
+}
