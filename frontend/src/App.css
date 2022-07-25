@@ -38,6 +38,7 @@ button:hover {
   max-width: 600px;
   overflow: auto;
   text-align: center;
+  
 }
 
 .form {
@@ -68,11 +69,8 @@ button:hover {
   background-color: rgb(255, 255, 255);
   color: steelblue;
   text-align: center;
-  margin-left: 50px;
   background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
-  background-size: fill;
-  height: 100%;
-  margin-left: auto;
+  margin: 20px;
 }
 .fontStyle{
   text-shadow: 3px  1px #3e54b9;
@@ -86,6 +84,7 @@ button:hover {
   background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
   background-size: fill;
   height: 100%;
+  margin: 20px;
   
 }
 

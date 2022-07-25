@@ -82,9 +82,7 @@ const ReadList = () => {
         <button> Add Book to List!</button>
         </form>
         </div>
-        
         <DisplayReadList />
-        
     </div> 
     
     );
