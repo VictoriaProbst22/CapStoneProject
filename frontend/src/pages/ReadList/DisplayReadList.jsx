@@ -29,7 +29,7 @@ const DisplayReadList = () => {
         getReaderList();
       }, [token]);
       
-
+      
 
 
       const deleteBook= async (el)=>{
@@ -37,9 +37,8 @@ const DisplayReadList = () => {
             let response = await axios.delete(`http://127.0.0.1:8000/readers/${el.id}/`, {
                 headers: {
                     Authorization: 'Bearer ' + token
-                }
-            }) 
-            
+                },
+            });
             console.log(response.data)
         } catch (error) {
             console.log(error.message)

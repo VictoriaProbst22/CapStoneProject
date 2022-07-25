@@ -101,15 +101,11 @@ button:hover {
 }
 
 .textStyle{
-  text-align: justify;
+  text-align: center;
   color: steelblue;
 }
-.fa {
-  font-size: 50px;
-  cursor: pointer;
-  user-select: none;
-}
 
-.fa:hover {
-  color: darkblue;
+.chartStye{
+  position: right;
+
 }

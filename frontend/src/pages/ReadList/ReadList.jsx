@@ -79,7 +79,7 @@ const ReadList = () => {
             value={formData.text}
             onChange={handleInputChange} />
         </label>
-        <button> Add Book to Read List!</button>
+        <button> Add Book to List!</button>
         </form>
         </div>
         
