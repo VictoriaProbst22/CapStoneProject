@@ -48,7 +48,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="container" className="frontPage" >
+    <div  className="frontPage" >
       <h1>Home Page for {user.username}!</h1>
       <Link to="/addBook"> To Read List</Link>
       <div></div>
