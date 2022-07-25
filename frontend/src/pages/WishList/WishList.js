@@ -61,7 +61,7 @@ const WishList = () => {
         onChange={handleInputChange} />
         </label>
        
-        <button> Add Book to Wish List!</button>
+        <button> Add to List!</button>
         </form>
         <DisplayWishList/>
         </div>

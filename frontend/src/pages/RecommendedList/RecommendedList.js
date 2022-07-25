@@ -65,7 +65,7 @@ const RecommendedList = () => {
         onChange={handleInputChange} />
         </label>
         
-        <button>Add Recommend List!</button>
+        <button>Add To List!</button>
         </form>
         <DisplayRecommendedList/>
         </div>
