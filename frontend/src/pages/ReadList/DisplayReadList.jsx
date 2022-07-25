@@ -46,7 +46,7 @@ const DisplayReadList = () => {
         }
 
 
-
+       
        
 
 
@@ -62,8 +62,9 @@ const DisplayReadList = () => {
                     <ul>Author(s): {el.authors}</ul>
                     <ul>Review: {el.text}</ul>
                     <CustomButton message = "Like" />
-                    <CustomButton message = "Dislike"/>
+                    <CustomButton message = "Dislike"/> 
                     <button onClick={()=> deleteBook(el)}>Delete</button>
+          
                 </div>
                
             )
@@ -73,3 +74,4 @@ const DisplayReadList = () => {
 }
  
 export default DisplayReadList;
+
