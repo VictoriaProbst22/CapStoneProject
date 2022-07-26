@@ -62,7 +62,8 @@ const DisplayReadList = () => {
                     <ul>Review: {el.text}</ul>
                     <CustomButton message = "Like" />
                     <CustomButton message = "Dislike"/> 
-                    <button onClick={()=> deleteBook(el)}>Delete</button>
+                    <div> </div>
+                    <button className="recommendButton" onClick={()=> deleteBook(el)}>Delete</button>
                     <p>
                       <hr></hr>
                     </p>

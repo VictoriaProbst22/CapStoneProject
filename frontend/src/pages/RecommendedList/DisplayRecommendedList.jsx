@@ -51,7 +51,7 @@ const DisplayRecommendedList = () => {
                     <ul>{index + 1}</ul>
                     <ul>Title: {el.title}</ul>
                     <ul>Author(s): {el.authors}</ul>
-                    <button onClick={()=> deleteBook(el)}>Delete</button>
+                    <button className="recommendButton" onClick={()=> deleteBook(el)}>Delete</button>
                     <p>
                       <hr></hr>
                     </p>
