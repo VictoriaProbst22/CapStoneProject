@@ -3,7 +3,7 @@ import axios from 'axios'
 import useCustomForm from "../../hooks/useCustomForm"
 import useAuth from "../../hooks/useAuth"
 import DisplayWishList from "./DisplayWishList";
-import { Link } from "react-router-dom";
+
 
 
 
@@ -61,6 +61,9 @@ const WishList = () => {
         </form>
         <DisplayWishList/>
         </div>
+        <p>
+            <hr></hr>
+        </p>
      
     </div> );
 }

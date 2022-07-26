@@ -110,3 +110,7 @@ button:hover {
   position: right;
 
 }
+
+.recommendButton{
+  font-size: 10px;
+}
