@@ -52,7 +52,7 @@ const DisplayReadList = () => {
       }
     return ( <div className="frontPage">
       
-        <h3 className="otherPages"> Read List:</h3>
+        <h3 className="frontPage"> Read List:</h3>
         {bookList.map((el, index) => {
             return(
                 <div >

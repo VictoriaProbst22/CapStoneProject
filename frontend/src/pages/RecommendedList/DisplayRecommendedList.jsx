@@ -44,7 +44,7 @@ const DisplayRecommendedList = () => {
 
     }
     return ( <div className="frontPage">
-        <h3 className="otherPages"> This is My Recommended List:</h3>
+        <h3 className="frontPage"> This is My Recommended List:</h3>
         {suggestBookList.map((el, index) => {
             return(
                 <div>

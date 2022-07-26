@@ -70,7 +70,7 @@ button:hover {
   background-color: rgb(255, 255, 255);
   color: steelblue;
   text-align: center;
-  background-image: url('https://cdn.wallpapersafari.com/29/23/IHz9xU.jpg');
+  background-color: rgb(149, 209, 194);
   margin: 20px;
 }
 .fontStyle{
@@ -82,8 +82,8 @@ button:hover {
 
 .otherPages{
   text-align: justify;
-  background-image: url('https://cdn.wallpapersafari.com/29/23/IHz9xU.jpg');
-  background-size: fill;
+  background-image: url('https://graphicdesignjunction.com/wp-content/uploads/2014/05/001+background+pattern+designs.jpg');
+  background-size: cover;
   height: 100%;
   margin: 20px;
   

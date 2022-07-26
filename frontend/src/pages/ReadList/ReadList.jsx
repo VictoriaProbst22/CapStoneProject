@@ -42,7 +42,7 @@ const ReadList = () => {
 
     return ( <div className="otherPages">
         <h1 className="fontStyle">Read List Page</h1>
-        <h2 className="textStyle"> Add Another Book Here: </h2>
+        <h2 className="frontPage"> Add Another Book Here: </h2>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 
         <label>
