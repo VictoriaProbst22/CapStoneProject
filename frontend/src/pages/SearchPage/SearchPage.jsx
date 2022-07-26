@@ -89,7 +89,7 @@ const SearchPage = (props) => {
                     <ul>{index + 1}</ul>
                     <ul>Title: {item.volumeInfo.title}</ul>
                     <ul> Author(s):{item.volumeInfo.authors}</ul>
-                   <ul> <button onClick={handleClick}>See More</button></ul>
+                   <ul> <button className="recommendButton" onClick={handleClick}>See More</button></ul>
                    <div>  {isShown &&(
                         <ul>Description: {item.volumeInfo.description}</ul>
                        )}
@@ -97,9 +97,11 @@ const SearchPage = (props) => {
                         <ul>Genre: {item.volumeInfo.categories}</ul>
                        )}
                        </div>
-                    <button onClick={()=> addBook(item)}> + Read List</button>
-                    <button onClick={()=> addToList(item)}> + Wish List</button>
-                    <button onClick={()=> addToNextList(item)}>+ Recommend List</button>
+                    <button className="recommendButton" onClick={()=> addBook(item)}> + Read List</button>
+                    <div></div>
+                    <button className="recommendButton" onClick={()=> addToList(item)}> + Wish List</button>
+                    <div></div>
+                    <button className="recommendButton" onClick={()=> addToNextList(item)}>+ Recommend List</button>
                     <p>
                         <hr></hr>
                     </p>
