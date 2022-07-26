@@ -61,9 +61,10 @@ const DisplayReadList = () => {
                     <ul>Author(s): {el.authors}</ul>
                     <ul>Review: {el.text}</ul>
                     <CustomButton message = "Like" />
+                    <div> </div>
                     <CustomButton message = "Dislike"/> 
                     <div> </div>
-                    <button className="recommendButton" onClick={()=> deleteBook(el)}>Delete</button>
+                    <button className="deleteButton" onClick={()=> deleteBook(el)}>Delete</button>
                     <p>
                       <hr></hr>
                     </p>

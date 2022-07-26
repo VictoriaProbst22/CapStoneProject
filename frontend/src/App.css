@@ -112,8 +112,16 @@ button:hover {
 }
 
 .recommendButton{
-  font-size: 12px;
+   font-size: 17px;
   padding: 15px 17px;
   display: contents;
   margin-right: auto;
+}
+
+.deleteButton{
+  font-size: 17px;
+  padding: 15px 17px;
+  display: contents;
+  margin-right: auto;
+  color: red;
 }
