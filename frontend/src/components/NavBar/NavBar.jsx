@@ -15,6 +15,9 @@ const Navbar = () => {
             <b className="style">Books Emporium</b>
           </Link>
         </li>
+        <li> <Link to="/addBook"> Read List</Link></li>
+        <li> <Link to="/WishList"> Wish List</Link></li>
+        <li> <Link to="/RecommendedList"> Recommended List</Link></li>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
@@ -22,9 +25,7 @@ const Navbar = () => {
             <button onClick={() => navigate("/login")}>Login</button>
           )}
         </li>
-        <li> <Link to="/addBook"> Read List</Link></li>
-        <li> <Link to="/WishList"> Wish List</Link></li>
-        <li> <Link to="/RecommendedList"> Recommended List</Link></li>
+        
       </ul>
     </div>
   );
