@@ -42,10 +42,6 @@ const ReadList = () => {
 
     return ( <div className="otherPages">
         <h1 className="fontStyle">Read List Page</h1>
-        <Link to="/WishList"> To WishList</Link>
-        <div></div>
-        <Link to="/RecommendedList">To Recommended List</Link>
-        <div></div>
         <h2 className="textStyle"> Add Another Book Here: </h2>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 

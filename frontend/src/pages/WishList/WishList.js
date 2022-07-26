@@ -38,10 +38,6 @@ const WishList = () => {
     return ( 
     <div className="otherPages">
         <h1 className="fontStyle">Wish List Page</h1>
-         <Link to="/RecommendedList">To Recommended List</Link>
-         <div></div>
-         <Link to="/addBook"> To Read List</Link>
-         <div></div>
          <h2 className="frontPage"> Add Another Book Here:</h2>
         <div className="container">
         <form className="form" onSubmit={handleSubmit}> 

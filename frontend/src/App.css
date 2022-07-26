@@ -57,6 +57,7 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
   text-align: center;
+  display: flex;
 }
 
 .viewerCanvas{
@@ -69,7 +70,7 @@ button:hover {
   background-color: rgb(255, 255, 255);
   color: steelblue;
   text-align: center;
-  background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
+  background-image: url('https://cdn.wallpapersafari.com/29/23/IHz9xU.jpg');
   margin: 20px;
 }
 .fontStyle{
@@ -81,7 +82,7 @@ button:hover {
 
 .otherPages{
   text-align: justify;
-  background-image: url('https://thumbs.dreamstime.com/b/blank-book-page-useful-as-background-soft-pastel-colour-131420291.jpg');
+  background-image: url('https://cdn.wallpapersafari.com/29/23/IHz9xU.jpg');
   background-size: fill;
   height: 100%;
   margin: 20px;

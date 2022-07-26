@@ -4,7 +4,6 @@ import { Chart } from "react-google-charts"
 export const options = {
   title: "My Frequent Genres: ",
   backgroundColor: 'transparent',
-
 };
  
 
@@ -66,7 +65,7 @@ const genreCharts = ({bookListProps}) => {
       data={displayGenres()}
       options={options}
       width={"100%"}
-      height={"300px"}
+      height={"500px"}
       
     />
        
