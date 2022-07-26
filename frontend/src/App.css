@@ -73,6 +73,7 @@ button:hover {
   background-color: rgb(149, 209, 194);
   margin: 20px;
   border-radius: 45px;
+  padding-left: 50px;
 }
 .fontStyle{
   text-shadow: 3px  1px #3e54b9;
