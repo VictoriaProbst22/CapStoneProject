@@ -82,8 +82,7 @@ const SearchPage = (props) => {
 
 
     return (
-        <><div>
-        </div><div>
+        <><div className="frontPage">
             {props.searchResults.map((item, index)=>{
                 return(
                     <div>
@@ -101,6 +100,9 @@ const SearchPage = (props) => {
                     <button onClick={()=> addBook(item)}> + Read List</button>
                     <button onClick={()=> addToList(item)}> + Wish List</button>
                     <button onClick={()=> addToNextList(item)}>+ Recommend List</button>
+                    <p>
+                        <hr></hr>
+                    </p>
                     
                     </div>
 

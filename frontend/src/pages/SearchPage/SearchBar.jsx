@@ -22,8 +22,8 @@ const SearchBar = (props) => {
     }
 
     return ( 
-       <form onSubmit={handleSubmit} >
-        <div>
+       <form className="frontPage" onSubmit={handleSubmit} >
+        <div >
             <input id="title" type="text" name="search_term" value={sTerm} onChange={onChange} ></input>
             <button type="submit"> Search </button>
         </div>

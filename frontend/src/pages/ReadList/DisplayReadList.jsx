@@ -63,6 +63,9 @@ const DisplayReadList = () => {
                     <CustomButton message = "Like" />
                     <CustomButton message = "Dislike"/> 
                     <button onClick={()=> deleteBook(el)}>Delete</button>
+                    <p>
+                      <hr></hr>
+                    </p>
           
                 </div>
                
