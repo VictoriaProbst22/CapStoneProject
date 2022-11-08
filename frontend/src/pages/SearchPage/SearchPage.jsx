@@ -87,6 +87,7 @@ const SearchPage = (props) => {
                 return(
                     <div>
                     <ul>{index + 1}</ul>
+                    <img src={item.volumeInfo.imageLinks.thumbnail} alt="Screwed Up" />
                     <ul>Title: {item.volumeInfo.title}</ul>
                     <ul> Author(s):{item.volumeInfo.authors}</ul>
                    <ul> <button className="recommendButton" onClick={handleClick}>See More</button></ul>
